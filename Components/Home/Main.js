@@ -4,6 +4,7 @@ import react, { useEffect, useState } from "react";
 import Carousel from "./Carousel";
 import Category from "./Category";
 import Medicine from "./Medicine";
+import Footer from "../Footer/Footer.jsx";
 
 function Main() {
 
@@ -30,7 +31,7 @@ function Main() {
     <div class="flex flex-col">
       <Navbar />
       <Carousel />
-      <h1 className="text-2xl m-4">Shop By Category</h1>
+      <h1 className="text-3xl m-4">Shop By Category</h1>
       <div class="grid justify-around mx-5 grid-cols-5">
         <Category />
         <Category />
@@ -38,7 +39,8 @@ function Main() {
         <Category />
         <Category />
       </div>
-      <div class="mt-2 grid justify-around mx-5 grid-cols-4 gap-2 ">
+      <h1 className="text-3xl mt-6 ml-6">Medicine Corner</h1>
+      <div class=" grid justify-around mx-5 grid-cols-4 gap-2 ">
        { Meds.map((e)=>(
           <Medicine
           name={e.name}
@@ -52,6 +54,7 @@ function Main() {
         
         
       </div>
+      <Footer/>
     </div>
   );
 }

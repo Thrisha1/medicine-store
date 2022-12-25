@@ -1,7 +1,7 @@
 import React from 'react'
-import Cart from '../Components/Cart.jsx'
+import Cart from '../Components/Cart/Cart.jsx'
 import Navbar from '../Components/Home/Navbar'
-import Mycarthead from '../Components/Home/Mycarthead'
+import Mycarthead from '../Components/Cart/Mycarthead'
 
 function Product() {
   return (

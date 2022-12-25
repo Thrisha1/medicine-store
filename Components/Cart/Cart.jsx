@@ -4,7 +4,7 @@ import {
   decrement,
   increment,
   incrementByAmount,
-} from "../slices/counterSlice";
+} from "../../slices/counterSlice";
 
 function Cart() {
   const count = useSelector((state) => state.counter.items);

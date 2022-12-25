@@ -9,7 +9,7 @@ function Medicine({name,desc,price,img,id,qty}) {
 
   return (
     <div>
-      <div class="w-72 bg-gray-100 border border-none rounded-lg shadow-md dark:bg-white-800 dark:border-gray-700 flex flex-col items-center">
+      <div class=" mt-5 w-72 bg-gray-100 border border-none rounded-lg shadow-md dark:bg-white-800 dark:border-gray-700 flex flex-col items-center">
         <a href="#">
           <img
             class="rounded-t-lg object-fit h-48"
