@@ -112,7 +112,7 @@ function Footer() {
         <div class="py-6 px-4 bg-teal dark:bg-teal
          md:flex md:items-center md:justify-between">
           <span class="text-sm text-white dark:text-white sm:text-center">
-            © 2022 <a href="https://flowbite.com/">Flowbite™</a>. All Rights
+            © 2022 <a href="https://flowbite.com/">Instameds</a>. All Rights
             Reserved.
           </span>
           <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">

@@ -12,7 +12,8 @@ function Cart() {
   // const val = useSelector((state) => state.counter.value);
   return (
     <div className="">
-      {count.map((e) => (
+      {
+      count.map((e) => (
         <div class="flex bg-white mx-8 mt-10">
           <div className="w-52">
             <img class="w-full" src={e.img} alt="" />

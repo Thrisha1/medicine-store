@@ -94,12 +94,12 @@ function Navbar() {
                 {count}
               </div>
               <Link href="/mycart">
-                <button className="mr-3w p-3 bg-white">
-                  {/* <ShoppingCartIcon
+                <button className="mr-3w px-3 bg">
+                  <ShoppingCartIcon
                     class=""
                     style={{ color: "white", fontSize: "30px" }}
-                  /> */}
-                  mybag
+                  />
+                  {/* mybag */}
                 </button>
               </Link>
               <div class="flex items-center justify-between text-white w-3/4">
@@ -112,7 +112,7 @@ function Navbar() {
         </div>
       </nav>
       <div
-        class="bg-gradient-to-r from-teal-500 to-cyan-500 mt-16 justify-around hidden w-full md:flex md:w-auto md:order-1 items-center"
+        class="mt-5 bg-gradient-to-r from-teal-500 to-cyan-500 mt-16 justify-around hidden w-full md:flex md:w-auto md:order-1 items-center"
         id="navbar-search  "
       >
         {/* <div class=" inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -121,7 +121,7 @@ function Navbar() {
         {/* <div class="relative mt-3 md:hidden px-10">
         <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..."/>
       </div> */}
-        <ul class=" w-1/2 justify-around flex flex p-4 ml-20 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-none">
+        <ul class=" w-1/2 justify-around flex flex p-4 ml-20 mt-5 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-none">
           <li>
             <a
               href="#"
