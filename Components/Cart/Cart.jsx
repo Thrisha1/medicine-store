@@ -4,6 +4,7 @@ import {
   decrement,
   increment,
   incrementByAmount,
+  remove,
 } from "../../slices/counterSlice";
 
 function Cart() {
@@ -21,7 +22,7 @@ function Cart() {
           <div className="flex flex-col w-full ml-5">
             <div className="flex justify-between mt-1 ">
               <p class="text-2xl">{e.desc}</p>
-              <p class="text-2xl">{e.price}</p>
+              <p class="text-2xl">$ {e.price}</p>
             </div>
             <div className=" my-2">
               <p class="text-teal-500">In stock</p>
@@ -32,7 +33,9 @@ function Cart() {
                 <button
                   onClick={() => {
                     // e.preventDefault();
-                    dispatch(increment(e.id));
+                    const varid=e.id
+                    const var_price=e.basePrice
+                    dispatch(increment({varid,var_price}));
                   }}
                   class="mx-2 text-2xl"
                 >
@@ -54,12 +57,19 @@ function Cart() {
                 <button
                   onClick={() => {
                     // e.preventDefault();
-                    dispatch(decrement(e.id));
+                    
+                    const varid=e.id
+                    const var_price=e.price
+                    dispatch(decrement({varid,var_price}));
                   }}
                   class="mx-2 text-2xl"
                 >
                   -
                 </button>
+                <button class="border-2 border-gray-300 rounded-lg px-3 ml-5" onClick={()=>{
+                  const varid=e.id
+                  dispatch(remove(varid))
+                }}>Remove</button>
               </div>
             </div>
           </div>

@@ -1,13 +1,13 @@
-const Category = () => {
+const Category = ({src,name}) => {
   return (
     <div class="">
       
 
       <div class="w-56 bg-gray-100 border border-none rounded-lg shadow-md dark:bg-white-800 dark:border-gray-700">
-        <a href="#">
+        <a href="/">
           <img
             class="rounded-t-lg object-cover h-48 w-56"
-            src="https://www.netmeds.com/images/category/v1/547/thumb/hair_care_2.jpg"
+            src={src}
             alt=""
             // size="fit"
           />
@@ -15,7 +15,7 @@ const Category = () => {
         <div class="p-5">
           <a href="#">
             <h5 class="mb-2 text-xl font-bold tracking-tight dark:text-gray text-center">
-              Hair Care
+              {name}
             </h5>
             <h5 class="mb-1 text-lg font-bold tracking-tight dark:text-green-600 text-center">
               flat 20% Off

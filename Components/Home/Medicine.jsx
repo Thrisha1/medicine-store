@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment,incrementByAmount } from '../../slices/counterSlice'
 
-function Medicine({name,desc,price,img,id,qty}) {
+function Medicine({name,desc,price,img,id,qty,totprice}) {
 
   const dispatch = useDispatch()
   // const [Value, setValue] = useState(false);
@@ -34,7 +34,8 @@ function Medicine({name,desc,price,img,id,qty}) {
           <a
             onClick={(e) => {
               e.preventDefault();
-              dispatch(incrementByAmount({name,desc,price,img,id,qty}))
+              dispatch(incrementByAmount({name,desc,price,img,id,qty,totprice}))
+              
             }}
             href="#"
             style={{background: 'teal-400'}}

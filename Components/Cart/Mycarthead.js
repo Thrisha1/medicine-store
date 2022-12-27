@@ -1,6 +1,6 @@
 export default function Mycarthead () {
     return(
-        <div className=" h-full ">
+        <div className=" ">
             
             <div className="flex justify-between mt-10 mx-6">
                 <h1 class="text-2xl">Shopping Cart</h1>
