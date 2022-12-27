@@ -68,7 +68,8 @@ function Cart() {
                 </button>
                 <button class="border-2 border-gray-300 rounded-lg px-3 ml-5" onClick={()=>{
                   const varid=e.id
-                  dispatch(remove(varid))
+                  const var_price=e.price
+                  dispatch(remove({varid,var_price}))
                 }}>Remove</button>
               </div>
             </div>
