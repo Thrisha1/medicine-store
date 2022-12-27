@@ -24,7 +24,7 @@ export const counterSlice = createSlice({
       });
     },
     decrement: (state, action) => {
-      state.total += Number(action.payload.var_price);
+      state.total -= (action.payload.var_price);
       state.items.map((item) => {
         if (item.id === action.payload.varid) {
           item.qty -= 1;
