@@ -11,6 +11,7 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, action) => {
+      state.value += 1;
       state.total += Number(action.payload.var_price);
       state.items.map((item) => {
         if (item.id === action.payload.varid) {
@@ -24,6 +25,7 @@ export const counterSlice = createSlice({
       });
     },
     decrement: (state, action) => {
+      state.value -= 1;
       state.total -= (action.payload.var_price);
       state.items.map((item) => {
         if (item.id === action.payload.varid) {
@@ -35,24 +37,57 @@ export const counterSlice = createSlice({
       });
     },
     remove: (state, action) => {
-      let empty_ar =[]
-      state.items.map((item) => {
-        if (item.id !== action.payload.varid) {
+      // state.items.map((item) => {
+      //   if (item.id !== action.payload.varid) {
           
-          empty_ar=[...empty_ar,item]
-          console.log(empty_ar);
-          
-        }
+      //     empty_ar=[...empty_ar,item]
+      //     // console.log(empty_ar);
+      //     if(empty_ar){
+      //       state.total = 0;
+      //       state.total += item.qty * item.basePrice;
+      //       console.log(empty_ar)
+      //     }
+      //     else
+      //     {
+      //       state.total=0;
+      //     }
+      //   }
+      // });
+
+      const empty_ar = state.items.filter((item) => item.id !== action.payload.varid);
+
+      console.log(empty_ar);
+      state.value = 0;
+      if(empty_ar){
+        state.total = 0;
+        empty_ar.map((item) => {
+          state.value += item.qty;
+          state.total += item.qty * item.basePrice;
+        });
+      }
+      else
+      {
+        state.total=0;
+      }
         
-      });
       state.items=empty_ar
+
       // console.log('helo');
+
+      // remove items using filter
+      // let numbers = [1, 2, 3, 4, 5];
+
+      // Remove the number 3 from the array
+      // numbers = numbers.filter(number => number !== 3);
+
+      // console.log(numbers); // [1, 2, 4, 5]
+
     },
 
     incrementByAmount: (state, action) => {
       state.value += 1;
       state.total += Number(action.payload.price);
-      console.log(state.total);
+      // console.log(state.total);
       let check = true;
 
       if (!action?.payload?.basePrice)
@@ -66,7 +101,7 @@ export const counterSlice = createSlice({
           item.qty += 1;
           item.price = item.qty * item.basePrice;
           item.totPrice += item.price;
-          console.log(item.totPrice);
+          // console.log(item.totPrice);
           check = false;
         }
       });
