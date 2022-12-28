@@ -41,6 +41,7 @@ export const counterSlice = createSlice({
           
           empty_ar=[...empty_ar,item]
           console.log(empty_ar);
+          
         }
         
       });
