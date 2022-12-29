@@ -32,7 +32,7 @@ function Main() {
       <Navbar />
       <Carousel />
       <h1 className="text-xl md:text-3xl m-4">Shop By Category</h1>
-      <div class="grid justify-around md:mx-5 md:grid-cols-5 grid-cols-2">
+      <div class="grid justify-around mx-2 md:mx-5 md:grid-cols-5 grid-cols-2 w-74 h:32 md:w-full md:h-full" >
         <Category name="Hair Care" src="https://www.netmeds.com/images/cms/wysiwyg/brand/v2/msite/coony.jpg?v=15" />
         <Category name="Skin Care" src="https://www.netmeds.com/images/category/v1/547/thumb/hair_care_2.jpg" />
         {/* <Category name="Woman Care" src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1"/>

@@ -16,7 +16,7 @@ function Cart() {
       {
       count.map((e) => (
         <div class="flex bg-white mx-8 mt-10">
-          <div className="w-52">
+          <div className="md:w-52">
             <img class="w-full" src={e.img} alt="" />
           </div>
           <div className="flex flex-col w-full ml-5">

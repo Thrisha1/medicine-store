@@ -12,12 +12,12 @@ const Category = ({src,name}) => {
             // size="fit"
           />
         </a>
-        <div class="p-5">
+        <div class="p-2 md:p-5">
           <a href="#">
-            <h5 class="mb-2 text-xl font-bold tracking-tight dark:text-gray text-center">
+            <h5 class="mb-2 text-md md:text-xl font-bold tracking-tight dark:text-gray text-center">
               {name}
             </h5>
-            <h5 class="mb-1 text-lg font-bold tracking-tight dark:text-green-600 text-center">
+            <h5 class="mb-1 text-sm md:text-lg font-bold tracking-tight dark:text-green-600 text-center">
               flat 20% Off
             </h5>
           </a>

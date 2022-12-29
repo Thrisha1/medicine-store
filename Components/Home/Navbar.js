@@ -32,19 +32,22 @@ import { useSelector, useDispatch } from "react-redux";
   
 
   return (
-    <div class="flex flex-col">
-      <nav class="bg-gradient-to-r from-teal-500 to-cyan-500 border-white-200 px-2 sm:px-4 py-2.5 rounded dark:bg-teal-500 flex flex-col fixed w-full">
-        <div class="container flex flex-col flex-wrap justify-between w-full mt-5">
-          <div class="flex md:order-2 md:mx-10 justify-between w-full">
-            <span class="md:mx-20 self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
+    <div class="flex flex-col ">
+      <nav class="bg-gradient-to-r from-teal-500 to-cyan-500 border-white-200 px-2 sm:px-4 py-2.5 rounded dark:bg-teal-500 flex flex-col fixed w-100 md:w-full">
+        <div class="container flex flex-col flex-wrap justify-between w-100 md:w-full md:mt-5 mt-2">
+          <div class="flex md:order-2 md:mx-10 justify-between w-100 md:w-100">
+            <span class="md:mx-20 self-center text-2xl md:text-3xl font-semibold whitespace-nowrap dark:text-white">
               InstaMeds
             </span>
             <form >
-            {/* onSubmit={handleSubmit} */}
-              <input type="text" value="" class="hidden md:block" />
-              {/* onClick={handleChange} */}
-              <button type="submit" class="hidden md:block">Search</button>
-            </form>
+              <div class="flex">
+                
+                {/* onSubmit={handleSubmit} */}
+                  <input type="text" value="" class="hidden md:block" />
+                  {/* onClick={handleChange} */}
+                  <button type="submit" class="ml-3 hidden md:block">Search</button>
+              </div>
+              </form>
             {/* <div>{results.name}</div> */}
             <button
               data-collapse-toggle="navbar-search"
@@ -53,7 +56,7 @@ import { useSelector, useDispatch } from "react-redux";
               aria-controls="navbar-search"
               aria-expanded="false"
             >
-              <span class="sr-only">Open menu</span>
+              {/* <span class="sr-only">Open menu</span> */}
               {/* <svg
                 class="w-6 h-6"
                 aria-hidden="true"
@@ -73,7 +76,7 @@ import { useSelector, useDispatch } from "react-redux";
                 {count}
               </div>
               <Link href="/mycart">
-                <button className="mr-3w px-3 bg">
+                <button className="px-0 md:px-3 bg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -92,10 +95,10 @@ import { useSelector, useDispatch } from "react-redux";
                   {/* mybag */}
                 </button>
               </Link>
-              <div class="hidden md:flex items-center justify-between text-white w-3/4">
+              <div class="hidden md:flex items-center justify-between text-white w-3/4 ">
                 {/* <CircleIcon class="position-relative "/> */}
                 <AccountCircleIcon />
-                <button>SignIn</button>/<button>SignUp</button>
+                <button class="px-2">SignIn</button>/<button class="px-2">SignUp</button>
               </div>
             </div>
           </div>
