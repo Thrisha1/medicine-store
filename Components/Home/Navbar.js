@@ -33,9 +33,9 @@ import { useSelector, useDispatch } from "react-redux";
 
   return (
     <div class="flex flex-col ">
-      <nav class="bg-gradient-to-r from-teal-500 to-cyan-500 border-white-200 px-2 sm:px-4 py-2.5 rounded dark:bg-teal-500 flex flex-col fixed w-100 md:w-full">
+      <nav class="bg-gradient-to-r from-teal-500 to-cyan-500 border-white-200 px-2 sm:px-4 py-2.5 rounded dark:bg-teal-500 flex flex-col fixed w-full">
         <div class="container flex flex-col flex-wrap justify-between w-100 md:w-full md:mt-5 mt-2">
-          <div class="flex md:order-2 md:mx-10 justify-between w-100 md:w-100">
+          <div class="flex md:order-2 md:mx-10 justify-between w-full">
             <span class="md:mx-20 self-center text-2xl md:text-3xl font-semibold whitespace-nowrap dark:text-white">
               InstaMeds
             </span>
@@ -48,35 +48,13 @@ import { useSelector, useDispatch } from "react-redux";
                   <button type="submit" class="ml-3 hidden md:block">Search</button>
               </div>
               </form>
-            {/* <div>{results.name}</div> */}
-            <button
-              data-collapse-toggle="navbar-search"
-              type="button"
-              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-search"
-              aria-expanded="false"
-            >
-              {/* <span class="sr-only">Open menu</span> */}
-              {/* <svg
-                class="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg> */}
-            </button>
+              
             <div class="px-20 flex items-center justify-between w-1/4">
               <div className="absolute mb-8 ml-5 bg-teal-800 w-6 h-6 rounded-full text-white flex justify-center ">
                 {count}
               </div>
               <Link href="/mycart">
-                <button className="px-0 md:px-3 bg">
+                <button className="px-0 md:px-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
