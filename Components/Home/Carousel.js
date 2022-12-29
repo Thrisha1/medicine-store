@@ -45,7 +45,7 @@ export default function Carousel() {
   }, [currentIndex]);
 
   return (
-    <div className="w-100 py-4">
+    <div className="w-full md:py-4 pt-20">
       <img
         src={images[currentIndex]}
         alt="Current image"

@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
       </Head>
-      <main className="bg-gradient-to-b from-gray-200 to-white-200">
+          <main className="w-full bg-gradient-to-b from-gray-200 to-white-200">
         <Main/>
       </main>
     </>

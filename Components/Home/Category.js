@@ -3,10 +3,10 @@ const Category = ({src,name}) => {
     <div class="">
       
 
-      <div class="w-56 bg-gray-100 border border-none rounded-lg shadow-md dark:bg-white-800 dark:border-gray-700">
+      <div class="md:w-56 h:16 md:h-full bg-gray-100 border border-none rounded-lg shadow-md dark:bg-white-800 dark:border-gray-700">
         <a href="/">
           <img
-            class="rounded-t-lg object-cover h-48 w-56"
+            class="rounded-t-lg object-cover h-36 md:h-48 md:w-56"
             src={src}
             alt=""
             // size="fit"
