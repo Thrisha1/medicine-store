@@ -9,26 +9,14 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CircleIcon from "@mui/icons-material/Circle";
 const image = "https://www.freeiconspng.com/uploads/pills-png-1.png";
 import { useSelector, useDispatch } from "react-redux";
+import {search} from "../../slices/counterSlice";
 
  function Navbar() {
+
   const count = useSelector((state) => state.counter.value);
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // function SearchForm() {
-  //   const [searchQuery, setSearchQuery] = useState('');
-  //   const dispatch = useDispatch();
-  
-  //   function handleChange(event) {
-  //     setSearchQuery(event.target.value);
-  //   }
-  
-  //   function handleSubmit(event) {
-  //     event.preventDefault();
-  
-  //     dispatch(search(searchQuery));
-  //   }
-    
   
 
   return (
@@ -41,14 +29,12 @@ import { useSelector, useDispatch } from "react-redux";
             </span>
             <form >
               <div class="flex">
-                
-                {/* onSubmit={handleSubmit} */}
-                  <input type="text" value="" class="hidden md:block" />
-                  {/* onClick={handleChange} */}
-                  <button type="submit" class="ml-3 hidden md:block">Search</button>
+                <input type="text" onChange={(e)=>{
+                  dispatch(search(e.target.value))
+                }} class="block" />
               </div>
               </form>
-              
+
             <div class="px-20 flex items-center justify-between w-1/4">
               <div className="absolute mb-8 ml-5 bg-teal-800 w-6 h-6 rounded-full text-white flex justify-center ">
                 {count}

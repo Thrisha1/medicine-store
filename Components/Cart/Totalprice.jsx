@@ -5,6 +5,7 @@ import { decrement, increment,incrementByAmount } from '../../slices/counterSlic
 function Totalprice() {
     
     const dispatch = useDispatch();
+    const item = useSelector((state) => state.counter.value);
     const count = useSelector((state) => state.counter.total);
 
   return (
@@ -15,7 +16,7 @@ function Totalprice() {
         </p>
         <a href="#">
           <h5 class="mb-4 text-xl font-normal tracking-tight text-gray-900 dark:text-dark">
-            Subtotal(4 Items):  $ {count}
+            Subtotal({item} Items):  $ {count}
           </h5>
         </a>
         <a

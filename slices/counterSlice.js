@@ -1,9 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 const initialState = {
   value: 0,
   total: 0,
   items: [],
+  medicine:[],
+  medicine_dup:[],
+  med_name:'',
 };
 
 export const counterSlice = createSlice({
@@ -36,23 +40,29 @@ export const counterSlice = createSlice({
         }
       });
     },
+    insert: (state, action) => {
+      state.medicine = action.payload 
+      state.medicine_dup = state.medicine
+
+    },
+    search: (state, action) => {
+        state.med_name = action.payload
+        const searchTerm = state.med_name
+        console.log(searchTerm);
+        if(searchTerm==""){
+          state.medicine_dup = state.medicine
+        }
+        else{
+
+          const result = state.medicine.filter(med => med.name.includes(searchTerm));
+          state.medicine_dup = result
+          console.log(result);
+        }
+        
+    },
+
     remove: (state, action) => {
-      // state.items.map((item) => {
-      //   if (item.id !== action.payload.varid) {
-          
-      //     empty_ar=[...empty_ar,item]
-      //     // console.log(empty_ar);
-      //     if(empty_ar){
-      //       state.total = 0;
-      //       state.total += item.qty * item.basePrice;
-      //       console.log(empty_ar)
-      //     }
-      //     else
-      //     {
-      //       state.total=0;
-      //     }
-      //   }
-      // });
+      
 
       const empty_ar = state.items.filter((item) => item.id !== action.payload.varid);
 
@@ -72,7 +82,7 @@ export const counterSlice = createSlice({
         
       state.items=empty_ar
 
-      // console.log('helo');
+      
 
       // remove items using filter
       // let numbers = [1, 2, 3, 4, 5];
@@ -127,6 +137,6 @@ export const counterSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount, remove , search} = counterSlice.actions;
+export const { increment, decrement, incrementByAmount, remove , search, insert} = counterSlice.actions;
 
 export default counterSlice.reducer;

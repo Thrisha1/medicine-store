@@ -5,10 +5,15 @@ import Carousel from "./Carousel";
 import Category from "./Category";
 import Medicine from "./Medicine";
 import Footer from "../Footer/Footer.jsx";
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment,incrementByAmount,insert } from '../../slices/counterSlice'
 
 function Main() {
 
-  const [Meds, setMeds] = useState([]);
+  const dispatch = useDispatch()
+  const Meds = useSelector((state) => state.counter.medicine_dup);
+
+  // const [Meds, setMeds] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -16,7 +21,8 @@ function Main() {
     )
       .then((response) => response.json())
       .then((response) => {
-        setMeds(response)
+        // setMeds(response)
+        dispatch(insert(response))
         console.log(Meds);
       })
       .catch((err) => console.error(err));
