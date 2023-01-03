@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import MedicationIcon from "@mui/icons-material/Medication";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
@@ -9,15 +9,12 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CircleIcon from "@mui/icons-material/Circle";
 const image = "https://www.freeiconspng.com/uploads/pills-png-1.png";
 import { useSelector, useDispatch } from "react-redux";
-import {search} from "../../slices/counterSlice";
+import { search } from "../../slices/counterSlice";
 
- function Navbar() {
-
+function Navbar() {
   const count = useSelector((state) => state.counter.value);
 
   const dispatch = useDispatch();
-
-  
 
   return (
     <div class="flex flex-col ">
@@ -27,13 +24,31 @@ import {search} from "../../slices/counterSlice";
             <span class="md:mx-20 self-center text-2xl md:text-3xl font-semibold whitespace-nowrap dark:text-white">
               InstaMeds
             </span>
-            <form >
+            <form>
               <div class="flex">
-                <input type="text" onChange={(e)=>{
-                  dispatch(search(e.target.value))
-                }} class="block" />
+                <input
+                  type="text"
+                  onChange={(e) => {
+                    dispatch(search(e.target.value));
+                  }}
+                  class="block"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 text-white ml-3"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
               </div>
-              </form>
+            </form>
 
             <div class="px-20 flex items-center justify-between w-1/4">
               <div className="absolute mb-8 ml-5 bg-teal-800 w-6 h-6 rounded-full text-white flex justify-center ">
@@ -62,7 +77,8 @@ import {search} from "../../slices/counterSlice";
               <div class="hidden md:flex items-center justify-between text-white w-3/4 ">
                 {/* <CircleIcon class="position-relative "/> */}
                 <AccountCircleIcon />
-                <button class="px-2">SignIn</button>/<button class="px-2">SignUp</button>
+                <button class="px-2">SignIn</button>/
+                <button class="px-2">SignUp</button>
               </div>
             </div>
           </div>
@@ -131,4 +147,3 @@ import {search} from "../../slices/counterSlice";
 }
 
 export default Navbar;
-
